@@ -1,0 +1,28 @@
+Interface:
+
+<Interface>:
+    orientation: "vertical"
+    MDToolbar:
+        title: "Scraper"
+        anchor_title: "center"
+        pos_hint: {"top": 1}
+    MDFloatLayout:
+        MDBoxLayout:
+            adaptive_size: True
+            pos_hint:{"center_x":.5}
+            pos: 1,"460dp"
+            spacing: "10dp"
+            MDTextField:
+                id: input_keyword
+                hint_text:"SEARCH"
+                size_hint_x: None
+                width: root.width*.75
+            MDFloatingActionButton:
+                icon: "magnify"
+                on_press: root.scraping()
+        ScrollView:
+            id: scroll_view
+            size_hint:None,None
+            size: 1000,450
+
+
